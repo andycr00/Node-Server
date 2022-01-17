@@ -13,33 +13,33 @@ app.set('view engine', 'hbs');
 app.use( express.static('public'));
 
 
-app.get('/', function (req, res) {
-    res.render('home', {
-        nombre: 'Andres',
-        titulo: 'Curso Node'
-    });
-});
+// app.get('/', function (req, res) {
+//     res.render('home', {
+//         nombre: 'Andres',
+//         titulo: 'Curso Node'
+//     });
+// });
 
-app.get('/index', function (req, res) {
-    res.sendFile( __dirname + '/public/index.html');
-});
+// app.get('/index', function (req, res) {
+//     res.sendFile( __dirname + '/public/index.html');
+// });
 
-app.get('/generic', function (req, res) {
-    res.render('generic', {
-        nombre: 'Andres',
-        titulo: 'Curso Node'
-    });
-});
+// app.get('/generic', function (req, res) {
+//     res.render('generic', {
+//         nombre: 'Andres',
+//         titulo: 'Curso Node'
+//     });
+// });
 
-app.get('/elements', function (req, res) {
-    res.render('elements', {
-        nombre: 'Andres',
-        titulo: 'Curso Node'
-    });
-});
+// app.get('/elements', function (req, res) {
+//     res.render('elements', {
+//         nombre: 'Andres',
+//         titulo: 'Curso Node'
+//     });
+// });
 
 app.get('*', function (req, res) {
-  res.sendFile( __dirname + '/public/404.html');
+  res.sendFile( __dirname + '/public/index.html');
 });
 
 app.listen(port, () => {
